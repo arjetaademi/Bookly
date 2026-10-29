@@ -1,0 +1,157 @@
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #FAF6F1;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 460px;
+  margin: 0 auto;
+  padding: 65px 24px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.hero__subtitle {
+  margin: 0 0 16px;
+  color: #956A4F;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  color: #49362B;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4.5vw, 62px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero__description {
+  max-width: 430px;
+  margin: 0 0 28px;
+  color: #806A5B;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 27px;
+  border-radius: 50px;
+
+  background: #956A4F;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero__button:hover {
+  background: #6B4937;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE */
+
+.hero__visual {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__shape {
+  position: absolute;
+  inset: -65px -150px -65px -10px;
+  background: linear-gradient(135deg, #F0DED2, #E8D0C0);
+  border-radius: 55% 0 0 45%;
+  transform: rotate(-10deg);
+}
+
+.hero__visual-content {
+  position: relative;
+  z-index: 1;
+  color: #81573F;
+}
+
+.hero__sparkle {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 38px;
+}
+
+.hero__visual-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.hero__line {
+  width: 55px;
+  height: 1px;
+  margin: 22px 0;
+  background: #A6816A;
+}
+
+.hero__visual-small {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 60px 20px 40px;
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 46px);
+  }
+
+  .hero__description {
+    font-size: 14px;
+  }
+
+  .hero__visual {
+    min-height: 220px;
+  }
+
+  .hero__shape {
+    inset: -20px -40px -20px 5%;
+  }
+
+  .hero__visual-title {
+    font-size: 11px;
+  }
+}

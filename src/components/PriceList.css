@@ -1,0 +1,259 @@
+/* =========================
+   PRICE LIST
+========================= */
+
+.price-list {
+  background-color: #fffaf6;
+  padding: 75px 24px 85px;
+}
+
+.price-list__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.price-list__subtitle {
+  margin: 0 0 10px;
+  text-align: center;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  color: #956a4f;
+}
+
+.price-list h2 {
+  margin: 0 0 12px;
+  text-align: center;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.15;
+
+  color: #49362b;
+}
+
+.price-list__description {
+  max-width: 600px;
+  margin: 0 auto 42px;
+
+  text-align: center;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: #806a5b;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.price-list__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 220px;
+  padding: 25px 22px 20px;
+
+  background-color: #faf6f1;
+
+  border: 1px solid #e4d7cc;
+  border-radius: 10px;
+
+  box-shadow: 0 5px 18px rgba(73, 54, 43, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9aa94;
+
+  box-shadow: 0 12px 28px rgba(73, 54, 43, 0.1);
+}
+
+/* TOP OF CARD */
+
+.price-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.price-card h3 {
+  margin: 0 0 9px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 500;
+
+  color: #49362b;
+}
+
+.price-card__top p {
+  max-width: 210px;
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+
+  color: #806a5b;
+}
+
+.price-card__price {
+  flex-shrink: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #815239;
+
+  white-space: nowrap;
+}
+
+/* BOTTOM OF CARD */
+
+.price-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-top: 24px;
+  padding-top: 16px;
+
+  border-top: 1px solid #ded0c5;
+}
+
+.price-card__bottom span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+
+  color: #49362b;
+}
+
+.price-card__bottom button {
+  padding: 9px 17px;
+
+  background-color: transparent;
+  color: #815239;
+
+  border: 1px solid #a6816a;
+  border-radius: 50px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.price-card__bottom button:hover {
+  background-color: #956a4f;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .price-list__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .price-list {
+    padding: 60px 18px 65px;
+  }
+
+  .price-list h2 {
+    font-size: 36px;
+  }
+
+  .price-list__description {
+    margin-bottom: 32px;
+    font-size: 13px;
+  }
+
+  .price-list__cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .price-card:last-child {
+    grid-column: auto;
+  }
+
+  .price-card {
+    min-height: auto;
+    padding: 22px 20px 18px;
+  }
+
+  .price-card__top {
+    gap: 12px;
+  }
+
+  .price-card h3 {
+    font-size: 20px;
+  }
+
+  .price-card__price {
+    font-size: 15px;
+  }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .price-card__top {
+    flex-direction: column;
+  }
+
+  .price-card__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .price-card__bottom button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+.admin__logout {
+  background: #1b0e0a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin__logout:hover {
+  background: #573429;
+}
+.admin__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin__cancel,
+.admin__complete {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin__cancel {
+  background: #fce8e6;
+  color: #a83232;
+}
+
+.admin__cancel:hover {
+  background: #f7d1cc;
+}
+
+.admin__complete {
+  background: #e4f3e8;
+  color: #287a43;
+}
+
+.admin__complete:hover {
+  background: #cce9d4;
+}
+
+.admin__cancel:disabled,
+.admin__complete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
