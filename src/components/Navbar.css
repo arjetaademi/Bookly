@@ -21,6 +21,10 @@
   font-size: 30px;
   font-weight: 500;
   letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .navbar__links {
