@@ -412,6 +412,18 @@
     min-height: auto;
     padding: 65px 18px;
   }
+   .booking__date {
+    min-width: 0;
+  }
+
+  .booking__date input[type="date"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
 
   .booking__services {
     grid-template-columns: 1fr;

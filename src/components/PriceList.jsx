@@ -48,7 +48,7 @@ function PriceList() {
   }
 
   return (
-    <section className="price-list" id="pricing">
+    <section className="price-list" id="services">
       <div className="price-list__container">
       <p className="price-list__subtitle">OUR SERVICES</p>
 <h2>Price List</h2>
