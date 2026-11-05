@@ -114,6 +114,11 @@
   box-shadow: 0 10px 24px rgba(73, 54, 43, 0.08);
 }
 
+.service-card:focus-visible {
+  outline: 3px solid #956A4F;
+  outline-offset: 3px;
+}
+
 .service-card--selected {
   background: #956A4F;
   border-color: #956A4F;
@@ -417,11 +422,15 @@
   }
 
   .booking__date input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
     display: block;
     width: 100%;
     max-width: 100%;
     min-width: 0;
+    min-height: 48px;
     box-sizing: border-box;
+    text-align: left;
   }
 
 
